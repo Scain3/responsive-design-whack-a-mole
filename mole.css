@@ -1,5 +1,5 @@
 /* Write your CSS here. */
-div.wgs{
+div.wgs {
   position: relative;
   height: 241px;
   width: 320px;
@@ -7,7 +7,7 @@ div.wgs{
   overflow: hidden;
 }
 
-img.wgs__mole-head{
+img.wgs__mole-head {
   position: absolute;
   top: 0px;
   left: 55px;
@@ -16,15 +16,19 @@ img.wgs__mole-head{
   transition: margin-top 0.25s;
 }
 
-img.wgs__dirt-pile{
+img.wgs__dirt-pile {
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 320px;
 }
 
-img.wgs__mole-head--hidden{
+img.wgs__mole-head--hidden {
     margin-top: 341px;
+}
+
+img.wgs__mole-head--whacked {
+    background-color: white;
 }
 
 div.pf {

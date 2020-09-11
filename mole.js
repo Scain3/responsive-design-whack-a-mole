@@ -9,9 +9,16 @@
 // })
 
 function popUpRandomMole() {
-    const moleHeads = document.querySelectorAll('.wgs__mole-head');
-    let randNum = Math.floor((Math.random() * 7));
+    const moleHeads = document.querySelectorAll('.wgs__mole-head:not(.wgs__mole-head--whacked)');
+    console.log(moleHeads);
+    let randNum = Math.floor((Math.random() * moleHeads.length));
+    console.log(randNum);
     let mole = moleHeads[randNum];
+    console.log(mole);
+    if(moleHeads.length === 0) {
+        alert("YOU WON!!");
+        return;
+    }
     mole.classList.remove("wgs__mole-head--hidden");
     setTimeout(() => hideMole(mole), 3000);
 }
@@ -32,5 +39,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const moleHeads = document.querySelector('.pf');
     moleHeads.addEventListener('click', (event) => {
         event.target.classList.add('wgs__mole-head--hidden');
+        event.target.classList.add('wgs__mole-head--whacked');
     });
 });
